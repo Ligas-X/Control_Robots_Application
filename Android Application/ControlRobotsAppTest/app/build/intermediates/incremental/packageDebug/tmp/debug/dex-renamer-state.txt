@@ -1,0 +1,4 @@
+#Sun Apr 14 19:18:10 YEKT 2019
+base.0=D\:\\Work\\Programming\\Android_Studio\\Projects\\ControlRobotsAppTest\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex

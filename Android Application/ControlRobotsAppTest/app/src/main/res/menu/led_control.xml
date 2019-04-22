@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:compat="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.controlrobotstestapp.LedControl">
+    <!--
+    <item
+        android:id="@+id/control_type"
+        android:orderInCategory="100"
+        compat:showAsAction="never"
+        android:title="@string/control_type" />
+
+    -->
+    <item
+        android:id="@+id/control_methods"
+        android:orderInCategory="100"
+        compat:showAsAction="always"
+        android:title="@string/control_methods" />
+
+</menu>
