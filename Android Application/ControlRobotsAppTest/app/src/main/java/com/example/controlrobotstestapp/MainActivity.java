@@ -8,10 +8,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-
 import java.util.Set;
 import java.util.ArrayList;
-
 import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -44,19 +42,15 @@ public class MainActivity extends AppCompatActivity {
         deviceListLayout = (LinearLayout) findViewById(R.id.deviceListLayout);
         pairButtonLayout = (LinearLayout) findViewById(R.id.pairButtonLayout);
 
-//        inscription.setVisibility(View.INVISIBLE); // View.INVISIBLE - ????????, ?? ???????? ?????; View.GONE - ???????? ? ?? ???????? ?????
         inscription.setText("Нажмите на кнопку для подключения!");
 
         myBluetooth = BluetoothAdapter.getDefaultAdapter();
         if (myBluetooth == null) {
-            // Show a message that the device has no bluetooth adapter
             Toast.makeText(getApplicationContext(), "Bluetooth Device Not Available", Toast.LENGTH_LONG).show();
-            // finish apk
             finish();
         } else {
             if (myBluetooth.isEnabled()) {
             } else {
-                // Ask to the user turn the bluetooth on
                 Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(turnBTon, 1);
             }
@@ -65,14 +59,14 @@ public class MainActivity extends AppCompatActivity {
         upToDown = AnimationUtils.loadAnimation(MainActivity.this, R.anim.uptodown);
         downToUp = AnimationUtils.loadAnimation(MainActivity.this, R.anim.downtoup);
 
-        //logo.setAnimation(upToDown);
-        //deviceListLayout.setAnimation(upToDown);
-        //pairButtonLayout.setAnimation(downToUp);
+        logo.setAnimation(upToDown);
+        deviceListLayout.setAnimation(upToDown);
+        pairButtonLayout.setAnimation(downToUp);
 
         buttonPair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                inscription.setVisibility(View.VISIBLE);
+                //inscription.setVisibility(View.VISIBLE);
                 inscription.setText("Список Bluetooth-устройств:");
                 pairedDevicesList(); // method that will be called
             }
@@ -98,14 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
     private AdapterView.OnItemClickListener myListClickListener = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView av, View v, int arg2, long arg3) {
-            // Get the device MAC address, the last 17 chars in the View
             String info = ((TextView) v).getText().toString();
             String address = info.substring(info.length() - 17);
-            // Make an intent to start next activity.
             Intent i = new Intent(MainActivity.this, LedControl.class);
-            // Change the activity.
             i.putExtra(EXTRA_ADDRESS, address); // this will be received at ledControl (class) Activity
-
             startActivity(i);
         }
     };

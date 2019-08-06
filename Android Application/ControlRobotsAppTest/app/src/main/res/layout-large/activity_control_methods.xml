@@ -1,0 +1,94 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top|center"
+    android:orientation="horizontal"
+    tools:context="com.example.controlrobotstestapp.ControlMethods">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="484dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:id="@+id/GridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:context="com.example.controlrobotstestapp.ControlMethods">
+
+                <ToggleButton
+                    android:id="@+id/firstToggleButton"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="ToggleButton"
+                    android:textOff="1ST OFF"
+                    android:textOn="1ST ON"
+                    android:textSize="20sp"
+                    android:background="@drawable/custom_button"/>
+
+                <ToggleButton
+                    android:id="@+id/secondToggleButton"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_margin="15dp"
+                    android:text="ToggleButton"
+                    android:textOff="2ND OFF"
+                    android:textOn="2ND ON"
+                    android:textSize="20sp"
+                    android:background="@drawable/custom_button"/>
+
+                <ToggleButton
+                    android:id="@+id/thirdToggleButton"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_margin="15dp"
+                    android:text="ToggleButton"
+                    android:textOff="3RD OFF"
+                    android:textOn="3RD ON"
+                    android:textSize="20sp"
+                    android:background="@drawable/custom_button"/>
+            </GridLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonOK"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="OK"
+                android:textSize="24sp"
+                android:background="@drawable/custom_button"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

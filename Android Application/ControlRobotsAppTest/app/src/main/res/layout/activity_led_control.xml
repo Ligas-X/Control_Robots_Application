@@ -76,8 +76,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="20dp"
-        android:gravity="bottom|center"
+        android:gravity="center"
         android:orientation="vertical">
 
         <Button
@@ -85,11 +84,11 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
             android:fontFamily="sans-serif"
-            android:text="Disconnect Bluetooth"
+            android:text="Disconnect"
             android:textAllCaps="false"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:background="@drawable/custom_button"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.controlrobotstestapp.MainActivity">
+
+    <TextView
+        android:id="@+id/logoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Control Robots App"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/deviceListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/inscription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Список Bluetooth-устройств:"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light"
+            android:textSize="22sp" />
+
+        <ListView
+            android:id="@+id/deviceList"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pairButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonPairBT"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:fontFamily="sans-serif"
+            android:text="Connect"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:background="@drawable/custom_button"/>
+    </LinearLayout>
+
+</LinearLayout>

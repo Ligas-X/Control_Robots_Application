@@ -648,6 +648,10 @@ drawable abc_vector_test
 drawable cosmic_dark_background
 drawable cosmic_dark_background_two
 drawable cosmic_light_background
+drawable custom_button
+drawable custom_button_focused
+drawable custom_button_normal
+drawable custom_button_pressed
 drawable ic_launcher
 drawable notification_action_background
 drawable notification_bg
